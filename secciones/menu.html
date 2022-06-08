@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>13 Burger House</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="../img/favicon.png">
     <link rel="stylesheet" href="../estilos/estilo.css">
 </head>
@@ -14,7 +15,7 @@
     <div id="grillaMenu">
         <header>
             <figure>
-                <img src="../img/banner.png" alt="Logo 13">
+                <img src="../img/banner.png" alt="Logo 13" data-aos="flip-left">
             </figure>
         </header>
 
@@ -40,7 +41,7 @@
         </nav>
 
 
-        <Section id="burgers" class="menuBurgers">
+        <Section id="burgers" class="menuBurgers" data-aos="fade-left">
 
 
             <div id="americana">
@@ -60,7 +61,7 @@
 
         </Section>
 
-        <Section id="13black" class="menuBlack">
+        <Section id="13black" class="menuBlack" data-aos="fade-right">
 
             <div id="criolla">
                 <img src="../img/criolla300x200.JPG" alt="Criolla">
@@ -80,7 +81,7 @@
         </Section>
 
 
-        <Section id="sandwiches" class="menuSandwiches">
+        <Section id="sandwiches" class="menuSandwiches" data-aos="fade-left">
 
             <div id="pampeano">
                 <img src="../img/pampeano300x200.JPG" alt="Pampeano">
@@ -104,6 +105,11 @@
             Medios de pago:
         </footer>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 
