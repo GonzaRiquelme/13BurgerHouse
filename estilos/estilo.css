@@ -6,8 +6,8 @@ header{
 		grid-area: header;
 	}
 
-nav{
-	grid-area: nav;
+nav#barra{
+	grid-area: navbar;
 }
 
 p#intro{
@@ -44,10 +44,16 @@ section#sandwiches{
 
 	/*estilos flex*/
 
+	header{
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+
 .menuBurgers{
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-direction: column;
+	flex-wrap: wrap;
 	width: 100%;
 	gap: 10px;
 	border: 30px;
@@ -57,8 +63,8 @@ section#sandwiches{
 
 .menuBlack{
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-direction: column;
+	flex-wrap: wrap;
 	width: 100%;
 	gap: 10px;
 	border: 30px;
@@ -68,24 +74,20 @@ section#sandwiches{
 
 .menuSandwiches{
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-direction: column;
+	flex-wrap: wrap;
 	width: 100%;
 	gap: 10px;
 	border: 30px;
 	justify-content: space-evenly;
 	align-content: flex-start;
 }
-.navFlex{
-	display: flex;
-	flex-direction: row;
-	background-image : url('../img/navbanner.jpg');
-	background-size: cover;
+
 }
 		/*grilla home*/
 
 #grilla{
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 }
 
@@ -93,19 +95,19 @@ section#sandwiches{
 		display: grid;
 		grid-template-areas: 
 		"header"
-		"nav" 
+		"navbar" 
 		"intro"
 		"footer";
 
 	grid-template-columns: auto;
-	grid-template-rows: 35% 15% 30% 20%;
-	gap: 10px;
+	grid-template-rows: 30% 10% auto auto;
+	gap: 1em;
 }
 
 /*grilla de la carta*/
 
 #grillaMenu{
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 }
 
@@ -113,18 +115,17 @@ section#sandwiches{
 		display: grid;
 		grid-template-areas: 
 		"header"
-		"nav"
+		"navbar"
 		"burgers"
 		"13black"
 		"sandwiches"
 		"footer";
 
 	grid-template-columns: auto;
-	grid-template-rows: 30% 15% 15% 15% 15% auto;
-	gap: 10px
+	grid-template-rows: 30% 25% auto auto auto 5%;
+	gap: 1em;
 }
 	
-}
 
 /*tablet*/
 
@@ -137,59 +138,62 @@ section#sandwiches{
 
 	/*estilos flex*/
 
+	header{
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+
 .menuBurgers{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	flex-wrap: wrap;
 	width: 100%;
-	gap: 10px;
+	gap: 2em;
 	justify-content: space-evenly;
 	align-content: flex-start;
 }
 
 .menuBlack{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	flex-wrap: wrap;
 	width: 100%;
-	gap: 10px;
+	gap: 2em;
 	justify-content: space-evenly;
 	align-content: flex-start;
 }
 
 .menuSandwiches{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	flex-wrap: wrap;
 	width: 100%;
-	gap: 10px;
+	gap: 2em;
 	justify-content: space-evenly;
 	align-content: flex-start;
 }
-.navFlex{
-	display: flex;
-	flex-direction: column;
-	background-image : url('../img/navbanner.jpg');
-	background-size: cover;
+
 }
 
-			/*grilla home*/
+/*grilla home*/
 
 #grilla{
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 }
 
 #grilla{
 		display: grid;
 		grid-template-areas: 
-		"nav header"
-		"nav intro"
-		"nav footer";
+		"header header"
+		"navbar navbar"
+		"intro intro"
+		"footer footer";
 
-	grid-template-columns: 15% auto;
-	grid-template-rows: 35% 50% 15%;
-	gap: 10px;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 30% 10% auto auto;
+	row-gap: 1em;
 }
 
 /*grilla de la carta*/
@@ -200,21 +204,22 @@ section#sandwiches{
 }
 
 #grillaMenu{
-		display: grid;
-		grid-template-areas: 
-		"nav header"
-		"nav burgers"
-		"nav 13black"
-		"nav sandwiches"
-		"footer footer";
+	display: grid;
+	grid-template-areas: 
+	"header header"
+	"navbar navbar"
+	"burgers burgers"
+	"13black 13black"
+	"sandwiches sandwiches"
+	"footer footer";
 
-	grid-template-columns: 15% auto;
-	grid-template-rows: 35% 15% 15% 15% auto;
-	row-gap: 10px;
-	column-gap: 10px;
+grid-template-columns: 50% 50%;
+grid-template-rows: 30% 25% auto auto auto 5%;
+row-gap: 1em;
+column-gap: 1em;
 }
 	
-	}
+
 
 /*desktop*/
 
@@ -226,42 +231,45 @@ section#sandwiches{
 	}
 			/*estilos flex*/
 
+		header{
+			display: flex;
+			justify-content: center;
+			align-content: center;
+		}
+
 		.menuBurgers{
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			flex-wrap: wrap;
 			width: 100%;
-			gap: 10px;
-			justify-content: space-evenly;
-			align-content: flex-start;
+			height: 100%;
+			gap: 1em;
+			justify-content: center;
+			align-content: center;
 		}
 
 		.menuBlack{
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			flex-wrap: wrap;
 			width: 100%;
-			gap: 10px;
-			justify-content: space-evenly;
-			align-content: flex-start;
+			height: 100%;
+			gap: 1em;
+			justify-content:center;
+			align-content:center;
 		}
 
 		.menuSandwiches{
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			flex-wrap: wrap;
 			width: 100%;
-			gap: 10px;
-			justify-content: space-evenly;
-			align-content: flex-start;
+			height: 100%;
+			gap: 1em;
+			justify-content: center;
+			align-content: center;
 		}
-		.navFlex{
-			display: flex;
-			flex-direction: column;
-			background-image : url('../img/navbanner.jpg');
-			background-size: cover;
-		}
-
+		
 			/*grilla home*/
 
 		#grilla{
@@ -272,35 +280,41 @@ section#sandwiches{
 		#grilla{
 				display: grid;
 				grid-template-areas: 
-				"nav header"
-				"nav intro"
-				"nav footer";
+				"header header"
+				"navbar navbar"
+				"intro intro"
+				"footer footer";
 
-			grid-template-columns: 15% auto;
-			grid-template-rows: 35% 50% 15%;
-			gap: 10px;
+			grid-template-columns: auto auto;
+			grid-template-rows: 30% 10% auto auto;
+			gap: 1em;
 		}
 
 		/*grilla de la carta*/
 
 		#grillaMenu{
 			width: 100%;
-			height: 100vh;
+			height: 100%;
 		}
 
 		#grillaMenu{
 				display: grid;
 				grid-template-areas: 
-				"nav header"
-				"nav burgers"
-				"nav 13black"
-				"nav sandwiches"
+				"header header"
+				"navbar navbar"
+				"burgers burgers"
+				"13black 13black"
+				"sandwiches sandwiches"
 				"footer footer";
 
-			grid-template-columns: 15% auto;
-			grid-template-rows: 35% 15% 15% 15% auto;
-			row-gap: 10px;
-			column-gap: 10px;
+			grid-template-columns: auto auto;
+			grid-template-rows: 22% 10% auto auto auto 5%;
+			row-gap: 1em;
+			column-gap: 1em;
 		}
 
 }
+
+/*Delivery Tab*/
+/*Quienes Somos Tab*/
+/*Contacto Tab*/ 
