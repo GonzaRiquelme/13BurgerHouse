@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*areas */
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+nav#barra {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: navbar;
+}
+
+p#intro {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: intro;
+}
+
+footer {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+}
+
+section#burgers {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: burgers;
+}
+
+section#13black {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 13black;
+}
+
+section#sandwiches {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: sandwiches;
+}
+
+/*Media Queries*/
+/*smartphone*/
+@media (max-width: 480px) {
+  body {
+    color: black;
+    background-color: grey;
+  }
+  /*estilos flex*/
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .menuBurgers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    border: 30px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .menuBlack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    border: 30px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .menuSandwiches {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    border: 30px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+}
+
+/*grilla home*/
+#grilla {
+  width: 100vw;
+  height: 100vh;
+}
+
+#grilla {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header" "navbar"  "intro" "footer";
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 30% 10% auto auto;
+      grid-template-rows: 30% 10% auto auto;
+  gap: 1em;
+}
+
+/*grilla de la carta*/
+#grillaMenu {
+  width: 100vw;
+  height: 100vh;
+}
+
+#grillaMenu {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header" "navbar" "burgers" "13black" "sandwiches" "footer";
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 30% 25% auto auto auto 5%;
+      grid-template-rows: 30% 25% auto auto auto 5%;
+  gap: 1em;
+}
+
+/*tablet*/
+@media (min-width: 481px) {
+  body {
+    color: red;
+    background-color: black;
+  }
+  /*estilos flex*/
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .menuBurgers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    gap: 2em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .menuBlack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    gap: 2em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .menuSandwiches {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    gap: 2em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+}
+
+/*grilla home*/
+#grilla {
+  width: 100vw;
+  height: 100vh;
+}
+
+#grilla {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header" "navbar navbar" "intro intro" "footer footer";
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 30% 10% auto auto;
+      grid-template-rows: 30% 10% auto auto;
+  row-gap: 1em;
+}
+
+/*grilla de la carta*/
+#grillaMenu {
+  width: 100%;
+  height: 100vh;
+}
+
+#grillaMenu {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header" "navbar navbar" "burgers burgers" "13black 13black" "sandwiches sandwiches" "footer footer";
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 30% 25% auto auto auto 5%;
+      grid-template-rows: 30% 25% auto auto auto 5%;
+  row-gap: 1em;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+}
+
+/*desktop*/
+@media (min-width: 1024px) {
+  body {
+    color: white;
+    background-color: black;
+  }
+  /*estilos flex*/
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .menuBurgers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 1em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .menuBlack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 1em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .menuSandwiches {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 1em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  /*grilla home*/
+  #grilla {
+    width: 100%;
+    height: 100vh;
+  }
+  #grilla {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "header header" "navbar navbar" "intro intro" "footer footer";
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: 30% 10% auto auto;
+        grid-template-rows: 30% 10% auto auto;
+    gap: 1em;
+  }
+  /*grilla de la carta*/
+  #grillaMenu {
+    width: 100%;
+    height: 100%;
+  }
+  #grillaMenu {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "header header" "navbar navbar" "burgers burgers" "13black 13black" "sandwiches sandwiches" "footer footer";
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: 22% 10% auto auto auto 5%;
+        grid-template-rows: 22% 10% auto auto auto 5%;
+    row-gap: 1em;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
+  }
+}
+
+/*Delivery Tab*/
+/*Quienes Somos Tab*/
+/*Contacto Tab*/
+/*# sourceMappingURL=Style.css.map */
