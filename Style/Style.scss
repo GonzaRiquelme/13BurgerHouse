@@ -12,7 +12,7 @@ nav#barra{
 grid-area: navbar;
 }
 
-p#intro{
+p.intro{
 grid-area: intro;
 }
 
@@ -89,11 +89,8 @@ align-content: flex-start;
     /*grilla home*/
 
 #grilla{
-width: 100vw;
-height: 100vh;
-}
-
-#grilla{
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-areas: 
     "header"
@@ -101,19 +98,16 @@ height: 100vh;
     "intro"
     "footer";
 
-grid-template-columns: auto;
-grid-template-rows: 30% 10% auto auto;
-gap: 1em;
+    grid-template-columns: auto;
+    grid-template-rows: 30% 10% auto auto;
+    gap: 1em;
 }
 
 /*grilla de la carta*/
 
 #grillaMenu{
-width: 100vw;
-height: 100vh;
-}
-
-#grillaMenu{
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-areas: 
     "header"
@@ -123,9 +117,9 @@ height: 100vh;
     "sandwiches"
     "footer";
 
-grid-template-columns: auto;
-grid-template-rows: 30% 25% auto auto auto 5%;
-gap: 1em;
+    grid-template-columns: auto;
+    grid-template-rows: 30% 25% auto auto auto 5%;
+    gap: 1em;
 }
 
 
@@ -181,11 +175,8 @@ align-content: flex-start;
 /*grilla home*/
 
 #grilla{
-width: 100vw;
-height: 100vh;
-}
-
-#grilla{
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-areas: 
     "header header"
@@ -193,32 +184,29 @@ height: 100vh;
     "intro intro"
     "footer footer";
 
-grid-template-columns: 50% 50%;
-grid-template-rows: 30% 10% auto auto;
-row-gap: 1em;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 10% auto auto;
+    row-gap: 1em;
 }
 
 /*grilla de la carta*/
 
 #grillaMenu{
-width: 100%;
-height: 100vh;
-}
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "navbar navbar"
+    "burgers burgers"
+    "13black 13black"
+    "sandwiches sandwiches"
+    "footer footer";
 
-#grillaMenu{
-display: grid;
-grid-template-areas: 
-"header header"
-"navbar navbar"
-"burgers burgers"
-"13black 13black"
-"sandwiches sandwiches"
-"footer footer";
-
-grid-template-columns: 50% 50%;
-grid-template-rows: 30% 25% auto auto auto 5%;
-row-gap: 1em;
-column-gap: 1em;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 25% auto auto auto 5%;
+    row-gap: 1em;
+    column-gap: 1em;
 }
 
 
@@ -274,18 +262,16 @@ body{
     
         /*grilla home*/
 
-    #grilla{
-        width: 100%;
-        height: 100vh;
-    }
+   
 
     #grilla{
-            display: grid;
-            grid-template-areas: 
-            "header header"
-            "navbar navbar"
-            "intro intro"
-            "footer footer";
+        
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "navbar navbar"
+        "intro intro"
+        "footer footer";
 
         grid-template-columns: auto auto;
         grid-template-rows: 30% 10% auto auto;
@@ -294,20 +280,19 @@ body{
 
     /*grilla de la carta*/
 
-    #grillaMenu{
-        width: 100%;
-        height: 100%;
-    }
+
 
     #grillaMenu{
-            display: grid;
-            grid-template-areas: 
-            "header header"
-            "navbar navbar"
-            "burgers burgers"
-            "13black 13black"
-            "sandwiches sandwiches"
-            "footer footer";
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "navbar navbar"
+        "burgers burgers"
+        "13black 13black"
+        "sandwiches sandwiches"
+        "footer footer";
 
         grid-template-columns: auto auto;
         grid-template-rows: 22% 10% auto auto auto 5%;
